@@ -1,80 +1,37 @@
-import roadshow1 from '@/public/Portfolio/Roadshows/IMG_1071.jpg'
-import roadshow2 from '@/public/Portfolio/Roadshows/IMG_2543.jpg'
-import roadshow3 from '@/public/Portfolio/Roadshows/IMG_2546.jpg'
-import roadshow4 from '@/public/Portfolio/Roadshows/IMG_2562.jpg'
-import roadshow5 from '@/public/Portfolio/Roadshows/IMG_2547.jpg'
-import roadshow6 from '@/public/Portfolio/Roadshows/IMG_2550.jpg'
-import roadshow7 from '@/public/Portfolio/Roadshows/IMG_2551.jpg'
-import roadshow8 from '@/public/Portfolio/Roadshows/IMG_2564.jpg'
-import roadshow9 from '@/public/Portfolio/Roadshows/IMG_2576.jpg'
-import roadshow10 from '@/public/Portfolio/Roadshows/IMG_6391.jpg'
-import roadshow11 from '@/public/Portfolio/Roadshows/IMG_6397.jpg'
-import roadshow12 from '@/public/Portfolio/Roadshows/IMG_6398.jpg'
-import roadshow13 from '@/public/Portfolio/Roadshows/IMG_6400.jpg'
-import roadshow14 from '@/public/Portfolio/Roadshows/IMG_6406.jpg'
-import roadshow15 from '@/public/Portfolio/Roadshows/IMG_6411.jpg'
-import roadshow16 from '@/public/Portfolio/Roadshows/IMG_6417.jpg'
-import roadshow17 from '@/public/Portfolio/Roadshows/IMG_6445.jpg'
-import roadshow18 from '@/public/Portfolio/Roadshows/IMG_6455.jpg'
-import roadshow19 from '@/public/Portfolio/Roadshows/IMG_6460.jpg'
-import roadshow20 from '@/public/Portfolio/Roadshows/IMG_6406.jpg'
-import roadshow21 from '@/public/Portfolio/Roadshows/IMG_6411.jpg'
-import roadshow22 from '@/public/Portfolio/Roadshows/IMG_6417.jpg'
-import roadshow23 from '@/public/Portfolio/Roadshows/IMG_6445.jpg'
-import roadshow24 from '@/public/Portfolio/Roadshows/IMG_6455.jpg'
-import roadshow25 from '@/public/Portfolio/Roadshows/IMG_6460.jpg'
-import roadshow26 from '@/public/Portfolio/Roadshows/IMG_6480.jpg'
-import roadshow27 from '@/public/Portfolio/Roadshows/IMG_6482.jpg'
-import roadshow28 from '@/public/Portfolio/Roadshows/IMG_6485.jpg'
-import roadshow29 from '@/public/Portfolio/Roadshows/IMG_7025.jpg'
-import roadshow30 from '@/public/Portfolio/Roadshows/IMG_7031.jpg'
-import roadshow31 from '@/public/Portfolio/Roadshows/IMG_7053.jpg'
-import roadshow32 from '@/public/Portfolio/Roadshows/IMG_7057.jpg'
-import roadshow33 from '@/public/Portfolio/Roadshows/IMG_9644.jpg'
-import roadshow34 from '@/public/Portfolio/Roadshows/IMG_9698.jpg'
-import roadshow35 from '@/public/Portfolio/Roadshows/IMG_9714.jpg'
-import roadshow36 from '@/public/Portfolio/Roadshows/IMG_9720.jpg'
-import roadshow37 from '@/public/Portfolio/Roadshows/IMG_9723.jpg'
 import Image from 'next/image'
 
 const content = [
-  roadshow1,
-  roadshow2,
-  roadshow3,
-  roadshow4,
-  roadshow5,
-  roadshow6,
-  roadshow7,
-  roadshow8,
-  roadshow9,
-  roadshow10,
-  roadshow11,
-  roadshow12,
-  roadshow13,
-  roadshow14,
-  roadshow15,
-  roadshow16,
-  roadshow17,
-  roadshow18,
-  roadshow19,
-  roadshow20,
-  roadshow21,
-  roadshow22,
-  roadshow23,
-  roadshow24,
-  roadshow25,
-  roadshow26,
-  roadshow27,
-  roadshow28,
-  roadshow29,
-  roadshow30,
-  roadshow31,
-  roadshow32,
-  roadshow33,
-  roadshow34,
-  roadshow35,
-  roadshow36,
-  roadshow37,
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420498/adobe%20playbook/roadshow/IMG_1071_djj1ov.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420509/adobe%20playbook/roadshow/IMG_2543_f9t5az.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420500/adobe%20playbook/roadshow/IMG_2546_zcaqtl.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420494/adobe%20playbook/roadshow/IMG_2551_uxn7po.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420492/adobe%20playbook/roadshow/IMG_2576_xogng5.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420491/adobe%20playbook/roadshow/IMG_6391_efiotc.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420490/adobe%20playbook/roadshow/IMG_6397_x53bkr.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420488/adobe%20playbook/roadshow/IMG_6398_qgfla5.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420487/adobe%20playbook/roadshow/IMG_6400_coac1z.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420486/adobe%20playbook/roadshow/IMG_6406_t3edhw.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420485/adobe%20playbook/roadshow/IMG_6411_lcfzpf.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420483/adobe%20playbook/roadshow/IMG_6417_beb3b8.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420482/adobe%20playbook/roadshow/IMG_6445_fr5tap.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420480/adobe%20playbook/roadshow/IMG_6455_csbz5r.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420479/adobe%20playbook/roadshow/IMG_6460_p9vcy9.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420478/adobe%20playbook/roadshow/IMG_6480_nwrstk.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420477/adobe%20playbook/roadshow/IMG_6482_wyswrv.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420476/adobe%20playbook/roadshow/IMG_6485_vkbze9.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420475/adobe%20playbook/roadshow/IMG_7025_gxlm3y.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420474/adobe%20playbook/roadshow/IMG_7031_spi2nu.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420472/adobe%20playbook/roadshow/IMG_7053_kjyxse.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420471/adobe%20playbook/roadshow/IMG_7057_qylbbi.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420470/adobe%20playbook/roadshow/IMG_9644_h01cat.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420470/adobe%20playbook/roadshow/IMG_9698_af6fv8.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420469/adobe%20playbook/roadshow/IMG_9714_lcptjt.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420445/adobe%20playbook/roadshow/IMG_2547_u7u8dh.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420444/adobe%20playbook/roadshow/IMG_9720_brpru4.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420444/adobe%20playbook/roadshow/IMG_2550_zhjciz.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420443/adobe%20playbook/roadshow/IMG_2564_j7zb4j.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420443/adobe%20playbook/roadshow/IMG_9723_vjqzpw.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420442/adobe%20playbook/roadshow/IMG_2562_rg4dr0.jpg',
 ]
 const roadshowContent = content.map((content, i) => {
   return (
@@ -86,6 +43,8 @@ const roadshowContent = content.map((content, i) => {
         priority
         src={content}
         alt="Roadshow"
+        width={1000}
+        height={1000}
         className="max-h-[700px] w-auto h-full"
       />
     </div>

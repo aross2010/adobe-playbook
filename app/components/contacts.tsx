@@ -151,9 +151,9 @@ const tools = [
 ]
 
 export default function Contacts() {
-  const renderedTools = tools.map(({ title, href }) => {
+  const renderedTools = tools.map(({ title, href }, i) => {
     return (
-      <li key={title}>
+      <li key={i}>
         <a
           target="_blank"
           href={href}

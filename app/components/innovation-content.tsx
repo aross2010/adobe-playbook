@@ -1,56 +1,31 @@
-import innovation1 from '@/public/Portfolio/Innovation Exchange/0088-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation2 from '@/public/Portfolio/Innovation Exchange/0094-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation3 from '@/public/Portfolio/Innovation Exchange/0100-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation4 from '@/public/Portfolio/Innovation Exchange/0103-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation5 from '@/public/Portfolio/Innovation Exchange/0108-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation6 from '@/public/Portfolio/Innovation Exchange/0127-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation7 from '@/public/Portfolio/Innovation Exchange/0139-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation8 from '@/public/Portfolio/Innovation Exchange/0145-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation9 from '@/public/Portfolio/Innovation Exchange/0169-Adobe-Summit-2024-Event-Photography.jpg'
-import innovation10 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -5.jpeg'
-import innovation11 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -9.jpeg'
-import innovation12 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -10.jpeg'
-import innovation13 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -26.jpeg'
-import innovation14 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -33.jpeg'
-import innovation15 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -35.jpeg'
-import innovation16 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -41.jpeg'
-import innovation17 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -53.jpeg'
-import innovation18 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -54.jpeg'
-import innovation19 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -60.jpeg'
-import innovation20 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -61.jpeg'
-import innovation21 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -77.jpeg'
-import innovation22 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -84.jpeg'
-import innovation23 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -85.jpeg'
-import innovation24 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -89.jpeg'
-import innovation25 from '@/public/Portfolio/Innovation Exchange/ADOBE NYC 2024 -91.jpeg'
 import Image from 'next/image'
 
 const content = [
-  innovation1,
-  innovation2,
-  innovation3,
-  innovation4,
-  innovation5,
-  innovation6,
-  innovation7,
-  innovation8,
-  innovation9,
-  innovation10,
-  innovation11,
-  innovation12,
-  innovation13,
-  innovation14,
-  innovation15,
-  innovation16,
-  innovation17,
-  innovation18,
-  innovation19,
-  innovation20,
-  innovation21,
-  innovation22,
-  innovation23,
-  innovation24,
-  innovation25,
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420213/adobe%20playbook/innovation%20exchange/0094-Adobe-Summit-2024-Event-Photography_zvikwu.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420214/adobe%20playbook/innovation%20exchange/0088-Adobe-Summit-2024-Event-Photography_ll99eg.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420213/adobe%20playbook/innovation%20exchange/0100-Adobe-Summit-2024-Event-Photography_adk89j.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420210/adobe%20playbook/innovation%20exchange/0127-Adobe-Summit-2024-Event-Photography_o5und4.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420208/adobe%20playbook/innovation%20exchange/0108-Adobe-Summit-2024-Event-Photography_yxddxe.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420208/adobe%20playbook/innovation%20exchange/0103-Adobe-Summit-2024-Event-Photography_t7i7qu.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420204/adobe%20playbook/innovation%20exchange/0145-Adobe-Summit-2024-Event-Photography_ql61oo.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420202/adobe%20playbook/innovation%20exchange/0169-Adobe-Summit-2024-Event-Photography_zudlmv.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420200/adobe%20playbook/innovation%20exchange/0139-Adobe-Summit-2024-Event-Photography_rlutxo.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420199/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-9_bdnsz1.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420197/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-26_as5zhz.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420196/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-5_tkru8k.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420195/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-10_sw14qx.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420194/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-53_cuw9fh.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420191/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-35_lfub69.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420190/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-41_t3vuxz.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420190/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-85_zg4ojc.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420188/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-33_qf6lkh.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420185/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-61_kjmfhk.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420183/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-84_onrevt.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420181/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-60_zjp6fs.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420179/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-54_vpw70f.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420174/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-89_yeeoqi.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420171/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-77_dklv2l.jpg',
+  'https://res.cloudinary.com/dxygrtzcg/image/upload/v1720420164/adobe%20playbook/innovation%20exchange/ADOBE_NYC_2024_-91_ktyil9.jpg',
 ]
 
 const innovationContent = content.map((content, i) => {
@@ -59,26 +34,14 @@ const innovationContent = content.map((content, i) => {
       key={i}
       className="transparent relative flex h-full justify-center"
     >
-      {typeof content === 'object' && 'src' in content ? (
-        <Image
-          priority
-          src={content}
-          alt="Roadshow"
-          className="max-h-[700px] w-auto h-full"
-        />
-      ) : (
-        <video
-          className="w-full"
-          preload="true"
-          autoPlay
-          loop
-        >
-          <source
-            src={content}
-            type="video/mp4"
-          />
-        </video>
-      )}
+      <Image
+        priority
+        src={content}
+        alt="Roadshow"
+        width={1000}
+        height={1000}
+        className="max-h-[700px] w-auto h-full"
+      />
     </div>
   )
 })
