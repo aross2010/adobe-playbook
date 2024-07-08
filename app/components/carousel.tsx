@@ -1,5 +1,5 @@
 'use client'
-import React, { use } from 'react'
+import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import roadshowContent from './roadshow-content'
@@ -63,7 +63,7 @@ export default function CarouselComponent({ selectedEvent }: CarouselProps) {
       </div>
       <Carousel
         infinite
-        autoPlay={false}
+        autoPlay
         autoPlaySpeed={3000}
         responsive={responsive}
         removeArrowOnDeviceType={['mobile']}

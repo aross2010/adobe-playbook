@@ -167,7 +167,10 @@ export default function Contacts() {
 
   const renderedContacts = contacts.map((contact, i) => {
     return (
-      <div className="flex items-center">
+      <div
+        key={i}
+        className="flex items-center"
+      >
         <div className="h-[90px] w-[90px] rounded-full p-1 border mr-6">
           <Image
             priority
