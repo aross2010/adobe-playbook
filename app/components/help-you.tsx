@@ -35,7 +35,7 @@ export default function HelpYou() {
     return (
       <div
         key={i}
-        className="rounded-lg border-2 border-white p-4"
+        className="rounded-lg border-2 border-white/75 p-4"
       >
         <h5 className="font-bold text-xl">{sla.title}</h5>
         <p>{sla.description}</p>
@@ -46,15 +46,14 @@ export default function HelpYou() {
   return (
     <section
       id="help-us-help-you"
-      className="flex gap-32"
+      className="flex lg:flex-row flex-col lg:gap-32 gap-16"
     >
-      <h3 className="font-bold text-5xl">
-        Help Us,
-        <br />
+      <h3 className="xl:w-1/4 font-bold md:text-5xl text-4xl">
+        Help Us, <br className="xl:block hidden" />
         Help You
         <br />
       </h3>
-      <div className="flex flex-col gap-4">{renderedSlas}</div>
+      <div className="flex w-full flex-col gap-4">{renderedSlas}</div>
     </section>
   )
 }

@@ -171,37 +171,57 @@ export default function Contacts() {
         key={i}
         className="flex items-center"
       >
-        <div className="h-[90px] w-[90px] rounded-full p-1 border mr-6">
+        <div className="lg:h-[90px] lg:w-[90px] h-[70px] w-[70px] rounded-full p-1 border md:block hidden border-white/75 mr-6">
           <Image
-            priority
             src={contact.portrait}
             alt={contact.name}
             className="rounded-full w-full h-full object-cover object-center"
           />
         </div>
 
-        <div className={`flex flex-1 ${i == 0 && 'border-t'}`}>
-          <div className={`flex flex-1 flex-col py-6 border-r border-b px-4`}>
-            <span className="font-bold">{contact.name}</span>
-            <span>
-              <a
-                href={`mailto:${contact.email}`}
-                className="underline"
-              >
-                Email
-              </a>{' '}
-              {contact.number && (
-                <Fragment>| Mobile: {contact.number}</Fragment>
-              )}
-            </span>
-            <span>Based in {contact.location}</span>
+        <div
+          className={`flex md:flex-row flex-col flex-1 ${
+            i == 0 && 'border-t border-white/75'
+          }`}
+        >
+          <div
+            className={`flex flex-1 md:flex-col md:items-start items-center py-6 border-r border-b border-b-white/25 md:border-b-white/75 border-white/75 px-4`}
+          >
+            <div className="flex-col flex">
+              <span className="font-bold">{contact.name}</span>{' '}
+              <span>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="underline"
+                >
+                  Email
+                </a>{' '}
+                {contact.number && (
+                  <span>
+                    <br /> Mobile: {contact.number}
+                  </span>
+                )}
+              </span>
+              <span>Based in {contact.location}</span>
+            </div>
+            <div className="lg:h-[90px] lg:w-[90px] h-[70px] w-[70px] rounded-full p-1 border md:hidden ml-auto border-white/75">
+              <Image
+                src={contact.portrait}
+                alt={contact.name}
+                className="rounded-full w-full h-full object-cover object-center"
+              />
+            </div>
           </div>
-          <div className="flex-1 flex ">
+          <div className="flex-1 flex">
             {contact.jobs.map((job, i) => {
               return (
                 <div
                   key={i}
-                  className={`py-1 px-4 flex-1 border-b border-r`}
+                  className={`py-1 px-4 flex-1 border-b border-r ${
+                    contact.jobs.length > 1 &&
+                    i < contact.jobs.length - 1 &&
+                    'md:border-r-white/75 border-r-white/25'
+                  } border-white/75`}
                 >
                   {job}
                 </div>
@@ -216,24 +236,30 @@ export default function Contacts() {
   return (
     <section
       id="contacts"
-      className="flex gap-24"
+      className="flex lg:flex-row flex-col xl:gap-24 gap-16"
     >
-      <div className="flex flex-col gap-6 w-1/4">
+      <div className="flex flex-col gap-6 lg:w-1/4">
         <h3 className="font-bold text-5xl">
           Let's
           <br /> Work!
         </h3>
         <h6>Click on a contact to get started.</h6>
-        <div>
-          <h6 className="mb-2">Key tools and support request forms:</h6>
-          <ul>{renderedTools}</ul>
+        <div className="flex justify-between items-end">
+          <div>
+            <h6 className="mb-2">Key tools and support request forms:</h6>
+            <ul>{renderedTools}</ul>
+          </div>
+          <Image
+            src={logo}
+            alt="Adobe logo"
+            className="w-auto sm:h-[80px] h-[65px] lg:hidden block"
+          />
         </div>
         <Image
-          priority
           src={logo}
           alt="Adobe logo"
           height={100}
-          className="mt-auto"
+          className="lg:mt-auto lg:block hidden"
         />
       </div>
       <div className="flex flex-col">{renderedContacts}</div>

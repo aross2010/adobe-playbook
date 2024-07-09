@@ -35,12 +35,11 @@ const innovationContent = content.map((content, i) => {
       className="transparent relative flex h-full justify-center"
     >
       <Image
-        priority
         src={content}
         alt="Roadshow"
         width={1000}
         height={1000}
-        className="max-h-[700px] w-auto h-full"
+        className=" w-auto h-full object-cover object-center"
       />
     </div>
   )

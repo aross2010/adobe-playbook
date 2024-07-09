@@ -8,7 +8,7 @@ import Contacts from './components/contacts'
 
 export default function Home() {
   return (
-    <main className=" w-full max-w-[1300px] px-6 py-24 flex flex-col gap-36 scroll-smooth overflow-x-hidden">
+    <main className=" w-full max-w-[1300px] px-6 md:py-24 py-12 flex flex-col gap-36 scroll-smooth overflow-x-hidden">
       <Title />
       <HowWeSupport />
       <EngangeUs />

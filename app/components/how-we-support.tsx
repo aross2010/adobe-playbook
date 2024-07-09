@@ -57,14 +57,16 @@ export default function HowWeSupport() {
     return (
       <div
         key={i}
-        className="rounded-lg border-2 border-white p-4"
+        className="rounded-lg border-2 border-white/75 p-4"
       >
         <h5 className="font-bold text-xl">{support.title}</h5>
         {support.processes.map((process, i) => {
           return (
             <span key={i}>
               {process}
-              {i !== support.processes.length - 1 && <span> | </span>}
+              {i !== support.processes.length - 1 && (
+                <span className="text-white/75"> | </span>
+              )}
             </span>
           )
         })}
@@ -75,14 +77,13 @@ export default function HowWeSupport() {
   return (
     <section
       id="how-we-support"
-      className="flex gap-32"
+      className="flex lg:flex-row flex-col lg:gap-32 gap-16"
     >
-      <h3 className="font-bold text-5xl">
-        How We
-        <br />
+      <h3 className="xl:w-1/4 font-bold md:text-5xl text-4xl">
+        How We <br className="md:block hidden" />
         Support
       </h3>
-      <div className="flex flex-col gap-4">{renderedSupports}</div>
+      <div className="flex w-full flex-col gap-4">{renderedSupports}</div>
     </section>
   )
 }

@@ -53,9 +53,9 @@ export default function CarouselComponent({ selectedEvent }: CarouselProps) {
   }
 
   return (
-    <div className="border rounded-lg h-[600px] overflow-hidden shadow-2xl relative">
+    <div className="border rounded-lg md:h-[600px] sm:h-[525px] h-[450px] overflow-hidden shadow-2xl relative">
       <div
-        className={`left-1/2 -translate-x-1/2 opacity-75 z-10 m-4 absolute mb-6 bg-white rounded-lg p-1 overflow-hidden shadow-xl transition-all`}
+        className={`left-1/2 -translate-x-1/2 opacity-75 md:w-auto w-max z-10 m-4 absolute bg-white rounded-lg p-1 overflow-hidden shadow-xl transition-all`}
       >
         <h5 className="text-transparent px-8 bg-clip-text bg-gradient-to-r from-[#eb1000] to-[#952b80] font-bold text-center">
           {selectedEvent} ({slideNumber}/{content.length})
