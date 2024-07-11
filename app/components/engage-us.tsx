@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { ArcherContainer, ArcherElement } from 'react-archer'
+import { motion } from 'framer-motion'
 
 const engagements = [
   'Vertical Marketers attend weekly forecast calls',
@@ -10,13 +11,14 @@ const engagements = [
 ]
 
 export default function EngangeUs() {
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState(2000)
 
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth)
     }
 
+    handleResize()
     window.addEventListener('resize', handleResize)
 
     return () => {
@@ -41,11 +43,16 @@ export default function EngangeUs() {
               ]
         }
       >
-        <div
-          key={i}
-          className="bubble rounded-full h-56 w-56 p-4 flex flex-col justify-center items-center border-2 border-white/75"
-        >
-          <span className="text-center lg:text-xl text-lg">{engagement}</span>
+        <div className="bubble rounded-full h-56 w-56 p-4 flex flex-col justify-center items-center border-2 border-white/75">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: i * 0.5 }}
+            viewport={{ once: true }}
+            className="text-center lg:text-xl text-lg"
+          >
+            {engagement}
+          </motion.span>
         </div>
       </ArcherElement>
     )
@@ -91,9 +98,15 @@ export default function EngangeUs() {
           }
         >
           <div className="bubble rounded-full h-72 w-72 p-6 flex justify-center items-center border-2 border-white/75">
-            <h3 className="text-white font-bold lg:text-5xl text-4xl text-center">
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25 }}
+              viewport={{ once: true }}
+              className="text-white font-bold lg:text-5xl text-4xl text-center"
+            >
               Ways to Engage Us
-            </h3>
+            </motion.h3>
           </div>
         </ArcherElement>
 

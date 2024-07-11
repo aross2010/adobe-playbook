@@ -1,3 +1,5 @@
+'use client'
+import { motion } from 'framer-motion'
 import React, { Fragment } from 'react'
 import kimPortrait from '@/public/portraits/Kim Castillo.jpg'
 import anniePortrait from '@/public/portraits/Annie Kennedy.jpg'
@@ -167,7 +169,11 @@ export default function Contacts() {
 
   const renderedContacts = contacts.map((contact, i) => {
     return (
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: i * 0.15 + 0.5 }}
         key={i}
         className="flex items-center"
       >
@@ -229,7 +235,7 @@ export default function Contacts() {
             })}
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   })
 
@@ -239,12 +245,31 @@ export default function Contacts() {
       className="flex lg:flex-row flex-col xl:gap-24 gap-16"
     >
       <div className="flex flex-col gap-6 lg:w-1/4">
-        <h3 className="font-bold text-5xl">
+        <motion.h3
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.75 }}
+          viewport={{ once: true }}
+          className="font-bold text-5xl"
+        >
           Let's
           <br /> Work!
-        </h3>
-        <h6>Click on a contact to get started.</h6>
-        <div className="flex justify-between items-end">
+        </motion.h3>
+        <motion.h6
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.75 }}
+          viewport={{ once: true }}
+        >
+          Click on a contact to get started.
+        </motion.h6>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.75 }}
+          viewport={{ once: true }}
+          className="flex justify-between items-end"
+        >
           <div>
             <h6 className="mb-2">Key tools and support request forms:</h6>
             <ul>{renderedTools}</ul>
@@ -254,13 +279,19 @@ export default function Contacts() {
             alt="Adobe logo"
             className="w-auto sm:h-[80px] h-[65px] lg:hidden block"
           />
-        </div>
-        <Image
-          src={logo}
-          alt="Adobe logo"
-          height={100}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 2 }}
           className="lg:mt-auto lg:block hidden"
-        />
+        >
+          <Image
+            src={logo}
+            alt="Adobe logo"
+            height={100}
+          />
+        </motion.div>
       </div>
       <div className="flex flex-col">{renderedContacts}</div>
     </section>

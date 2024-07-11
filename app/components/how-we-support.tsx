@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const supports = [
   {
@@ -55,9 +57,13 @@ const supports = [
 export default function HowWeSupport() {
   const renderedSupports = supports.map((support, i) => {
     return (
-      <div
+      <motion.div
         key={i}
         className="rounded-lg border-2 border-white/75 p-4"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: i * 0.15 }}
       >
         <h5 className="font-bold text-xl">{support.title}</h5>
         {support.processes.map((process, i) => {
@@ -70,7 +76,7 @@ export default function HowWeSupport() {
             </span>
           )
         })}
-      </div>
+      </motion.div>
     )
   })
 
@@ -79,10 +85,19 @@ export default function HowWeSupport() {
       id="how-we-support"
       className="flex lg:flex-row flex-col lg:gap-32 gap-16"
     >
-      <h3 className="xl:w-1/4 font-bold md:text-5xl text-4xl">
+      <motion.h3
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{
+          duration: 0.25,
+          delay: 0.5,
+        }}
+        viewport={{ once: true }}
+        className="xl:w-1/4 font-bold md:text-5xl text-4xl"
+      >
         How We <br className="md:block hidden" />
         Support
-      </h3>
+      </motion.h3>
       <div className="flex w-full flex-col gap-4">{renderedSupports}</div>
     </section>
   )

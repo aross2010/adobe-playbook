@@ -8,6 +8,7 @@ import Image from 'next/image'
 import CarouselComponent from './carousel'
 import { FaWineGlassAlt, FaLightbulb, FaRocket } from 'react-icons/fa'
 import { MdSupervisorAccount } from 'react-icons/md'
+import { motion } from 'framer-motion'
 
 const events = [
   {
@@ -46,7 +47,11 @@ export default function EventPortfolio() {
       <div className="lg:flex hidden gap-8 justify-evenly my-12 ">
         {events.map(({ title, thumbnail }, i) => {
           return (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.4 + 0.5 }}
+              viewport={{ once: true }}
               key={i}
               className="flex flex-col gap-4 flex-1"
             >
@@ -73,14 +78,18 @@ export default function EventPortfolio() {
                   className="h-full w-full rounded-lg transition-all object-cover object-center"
                 />
               </button>
-            </div>
+            </motion.div>
           )
         })}
       </div>
       <div className="lg:hidden grid grid-cols-2 gap-2 my-12">
         {events.map(({ title, icon }, i) => {
           return (
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.25 + 0.5 }}
+              viewport={{ once: true }}
               key={i}
               className={`bg-white p-1 rounded-lg flex flex-col gap-4 justify-center items-center w-full h-[150px] ${
                 selectedEvent == title ? 'shadow-2xl' : 'opacity-50'
@@ -93,7 +102,7 @@ export default function EventPortfolio() {
               <h5 className="text-transparent bg-clip-text bg-gradient-to-r from-[#eb1000] to-[#952b80] font-bold text-center md:text-lg">
                 {title}
               </h5>
-            </button>
+            </motion.button>
           )
         })}
       </div>
@@ -105,10 +114,24 @@ export default function EventPortfolio() {
       id="event-portfolio"
       className="flex justify-center flex-col"
     >
-      <h3 className="font-bold text-5xl text-center">Event Portfolio</h3>
-      <h6 className="mt-4 text-sm text-center">
+      <motion.h3
+        initial={{ opacity: 0, scale: 0.25 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.25, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="font-bold text-5xl text-center"
+      >
+        Event Portfolio
+      </motion.h3>
+      <motion.h6
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.75 }}
+        viewport={{ once: true }}
+        className="mt-4 text-sm text-center"
+      >
         Click an event to view more below
-      </h6>
+      </motion.h6>
       {renderedEvents}
       <CarouselComponent selectedEvent={selectedEvent} />
     </section>

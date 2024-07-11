@@ -8,6 +8,7 @@ import ultimateContent from './ultimate-content'
 import dedicatedContent from './dedicated-content'
 import { Events } from './event-portfolio'
 import { useEffect, useState, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 type CarouselProps = {
   selectedEvent: Events
@@ -53,7 +54,13 @@ export default function CarouselComponent({ selectedEvent }: CarouselProps) {
   }
 
   return (
-    <div className="border rounded-lg md:h-[600px] sm:h-[525px] h-[450px] overflow-hidden shadow-2xl relative">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.5 }}
+      viewport={{ once: true }}
+      className="border rounded-lg md:h-[600px] sm:h-[525px] h-[450px] overflow-hidden shadow-2xl relative"
+    >
       <div
         className={`left-1/2 -translate-x-1/2 opacity-75 md:w-auto w-max z-10 m-4 absolute bg-white rounded-lg p-1 overflow-hidden shadow-xl transition-all`}
       >
@@ -76,6 +83,6 @@ export default function CarouselComponent({ selectedEvent }: CarouselProps) {
       >
         {content}
       </Carousel>
-    </div>
+    </motion.div>
   )
 }

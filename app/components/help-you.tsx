@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import { motion } from 'framer-motion'
 
 const slas = [
   {
@@ -33,13 +34,17 @@ const slas = [
 export default function HelpYou() {
   const renderedSlas = slas.map((sla, i) => {
     return (
-      <div
+      <motion.div
         key={i}
         className="rounded-lg border-2 border-white/75 p-4"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 + i * 0.15 }}
       >
         <h5 className="font-bold text-xl">{sla.title}</h5>
         <p>{sla.description}</p>
-      </div>
+      </motion.div>
     )
   })
 
@@ -48,11 +53,19 @@ export default function HelpYou() {
       id="help-us-help-you"
       className="flex lg:flex-row flex-col lg:gap-32 gap-16"
     >
-      <h3 className="xl:w-1/4 font-bold md:text-5xl text-4xl">
+      <motion.h3
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{
+          duration: 0.25,
+        }}
+        viewport={{ once: true }}
+        className="xl:w-1/4 font-bold md:text-5xl text-4xl"
+      >
         Help Us, <br className="xl:block hidden" />
         Help You
         <br />
-      </h3>
+      </motion.h3>
       <div className="flex w-full flex-col gap-4">{renderedSlas}</div>
     </section>
   )
