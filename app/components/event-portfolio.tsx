@@ -41,6 +41,7 @@ export type Events =
 
 export default function EventPortfolio() {
   const [selectedEvent, setSelectedEvent] = useState<Events>('Roadshows')
+  const [isViewed, setIsViewed] = useState<boolean>(false)
 
   const renderedEvents = (
     <Fragment>
@@ -87,9 +88,10 @@ export default function EventPortfolio() {
           return (
             <motion.button
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.25 + 0.5 }}
+              whileInView={{ opacity: selectedEvent == title ? 1 : 0.5, y: 0 }}
+              transition={isViewed ? {} : { delay: i * 0.25 + 0.5 }}
               viewport={{ once: true }}
+              onViewportEnter={() => setIsViewed(true)}
               key={i}
               className={`bg-white p-1 rounded-lg flex flex-col gap-4 justify-center items-center w-full h-[150px] ${
                 selectedEvent == title ? 'shadow-2xl' : 'opacity-50'
