@@ -9,6 +9,7 @@ import dedicatedContent from './dedicated-content'
 import { Events } from './event-portfolio'
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 type CarouselProps = {
   selectedEvent: Events
@@ -25,6 +26,9 @@ export default function CarouselComponent({ selectedEvent }: CarouselProps) {
   const [slideNumber, setSlideNumber] = useState(1)
   const [content, setContent] = useState(roadshowContent)
   const ref = useRef<Carousel>(null)
+  const { ref: inViewRef, inView } = useInView({
+    triggerOnce: false,
+  })
 
   useEffect(() => {
     setSlideNumber(1)
@@ -59,7 +63,8 @@ export default function CarouselComponent({ selectedEvent }: CarouselProps) {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.5 }}
       viewport={{ once: true }}
-      className="border rounded-lg md:h-[600px] sm:h-[525px] h-[450px] overflow-hidden shadow-2xl relative"
+      ref={inViewRef}
+      className="border md:h-[600px] sm:h-[525px] md:overflow-x-hidden h-[400px] md:static relative object-fill object-center md:w-auto w-screen md:left-auto left-[50%] md:right-auto right-[50%] md:mr-0 mr-[-50vw] md:ml-0 ml-[-50vw] md:border border-l-0 border-r-0 md:rounded-lg rounded-none md:shadow-2xl shadow-xl"
     >
       <div
         className={`left-1/2 -translate-x-1/2 opacity-75 md:w-auto w-max z-10 m-4 absolute bg-white rounded-lg p-1 overflow-hidden shadow-xl transition-all`}
@@ -70,7 +75,7 @@ export default function CarouselComponent({ selectedEvent }: CarouselProps) {
       </div>
       <Carousel
         infinite
-        autoPlay
+        autoPlay={inView}
         autoPlaySpeed={3000}
         responsive={responsive}
         removeArrowOnDeviceType={['mobile']}
