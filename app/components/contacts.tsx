@@ -18,7 +18,7 @@ const contacts = [
     location: 'San Jose, CA',
     portrait: kimPortrait,
     jobs: [
-      <Fragment>
+      <Fragment key={1}>
         <h6 className="font-bold">Vertical 1</h6>
         <ul>
           <li>Matt Colquhoun</li>
@@ -26,7 +26,7 @@ const contacts = [
           <li>M&E FLM</li>
         </ul>
       </Fragment>,
-      <Fragment>
+      <Fragment key={2}>
         <span>
           <span className="font-bold uppercase">Summit</span> point of contact
         </span>
@@ -40,7 +40,7 @@ const contacts = [
     location: 'Bay Area, CA',
     portrait: anniePortrait,
     jobs: [
-      <Fragment>
+      <Fragment key={3}>
         <h6 className="font-bold">Vertical 2</h6>
         <ul>
           <li>V2 SLM</li>
@@ -58,7 +58,7 @@ const contacts = [
     location: 'Los Angeles, CA',
     portrait: jessePortrait,
     jobs: [
-      <Fragment>
+      <Fragment key={4}>
         <h6 className="font-bold">Vertical 3</h6>
         <ul>
           <li>Adam Schroeder</li>
@@ -66,7 +66,7 @@ const contacts = [
           <li>MFG FLM</li>
         </ul>
       </Fragment>,
-      <Fragment>
+      <Fragment key={5}>
         <h6 className="font-bold">Vertical 4</h6>
         <ul>
           <li>Pavan Ghaje</li>
@@ -82,7 +82,7 @@ const contacts = [
     location: 'Bay Area, CA',
     portrait: stephaniePortrait,
     jobs: [
-      <Fragment>
+      <Fragment key={6}>
         <h6>
           <span className="font-bold">EPIC Segment</span> - dedicated marketing
           support for CPs
@@ -102,7 +102,7 @@ const contacts = [
     location: 'San Jose, CA',
     portrait: karenPortrait,
     jobs: [
-      <Fragment>
+      <Fragment key={7}>
         <h6 className="font-bold">
           Digital Channel activations, field event promotions, and demand
           generation across all segments
@@ -118,7 +118,7 @@ const contacts = [
     location: 'San Jose, CA',
     portrait: talyaPortrait,
     jobs: [
-      <Fragment>
+      <Fragment key={8}>
         <h6 className="font-bold">
           Program support for all marketers and light touch 1:1 event support
         </h6>
@@ -252,7 +252,7 @@ export default function Contacts() {
           viewport={{ once: true }}
           className="font-bold text-5xl"
         >
-          Let's
+          Let&apos;s
           <br /> Work!
         </motion.h3>
         <motion.h6
